@@ -1,0 +1,561 @@
+/* 
+
+general
+
+colors: #9FF845, #9DF723, #A1E02B, #BDF723, #C4ED21
+
+gooogle fots: font-family: 'Corinthia', cursive; / font-family: 'Pacifico', cursive;
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root {
+    --back_green: #BDF723;
+    --gray: #808080;
+    --hover_gold: #ffd700;
+    --text_white: #ffffff;
+}
+
+* {
+    margin: 0em;
+    padding: 0.3em;
+    font-family: cursive;
+    font-size: calc(7px + (28 - 7) * ((100vw - 320px) / (1600 - 320)));
+    word-wrap: break-word;
+}
+
+html {
+    padding: 0em;
+    background-color: var(--back_green);
+    overflow-x: hidden;
+}
+
+body {
+    width: 90%;
+    margin: 0 auto;
+    background: rgb(152, 255, 77);
+    background: linear-gradient(90deg, rgba(151, 255, 77, 0.905) 0%, rgba(0, 213, 255, 0.761) 35%, rgba(151, 255, 77, 0.905) 100%);
+}
+
+main {
+    display: non;
+    height: 100%;
+    width: 100%;
+    padding: 0em;
+}
+
+section {
+    width: 100%;
+    padding: 0em;
+}
+
+p {
+    text-align: justify;
+    word-wrap: break-word;
+}
+
+p:first-of-type::first-letter {
+    font-size: 300%;
+    line-height: 0.9;
+    float: left;
+    padding-right: .225em;
+    font-family: 'Pacifico', cursive;
+}
+
+::selection {
+    color: black;
+    background-color: white;
+}
+
+/* Navigation */
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+}
+
+ul,
+li {
+    margin-left: 0em;
+    padding-left: 0em;
+}
+
+nav ul {
+    transform: rotate(0.005turn);
+}
+
+li {
+    display: inline;
+    list-style-type: none;
+}
+
+nav a:hover {
+    transform: rotate(-0.005turn);
+}
+
+nav li::before {
+    content: '';
+    background-image: url('media/lion.png');
+    background-size: 1.44em;
+    background-repeat: no-repeat;
+    margin-right: -0.7em;
+    height: 1.4em;
+    width: 2em;
+    display: inline-block;
+}
+
+/* Button bei großen Viewports ausblenden */
+
+nav button {
+    display: none;
+}
+
+/* heading */
+
+.heading {
+    background-image: url(media/elefanten.jpg), url(media/seeschwalbe.jpg);
+    background-position: 0em 31em;
+    background-size: 100%;
+    -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.5) 0px 0.2em 0.2em);
+    filter: drop-shadow(rgba(0, 0, 0, 0.5) 0px 0.2em 0.2em);
+    background-blend-mode: soft-light;
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0em;
+    align-items: center;
+}
+
+footer a:hover {
+    transform: rotate(0.01turn);
+}
+
+footer img {
+    width: 2em;
+    padding: 0;
+}
+
+/* link */
+
+a {
+    color: var(--text_white);
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: black 1px 1px 5px;
+}
+
+a:hover {
+    color: var(--hover_gold);
+    text-decoration: none;
+}
+
+a:focus {
+    color: var(--back_green);
+}
+
+/* figure */
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    display: inline-block;
+    text-align: right;
+    font-size: 60%;
+    opacity: 0.6;
+}
+
+/* headline */
+
+h1 {
+    color: var(--text_white);
+    text-shadow: black 2px 2px 5px;
+    text-align: center;
+    border-bottom: 5px solid var(--text_white);
+    line-height: 1.5em;
+    font-family: 'Pacifico', cursive;
+    background: url('media/zoo.png');
+    background-size: 2.6em;
+    background-repeat: no-repeat;
+    background-position: 14.2em;
+    font-size: 200%;
+    -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.5) 0px 0.2em 0.2em);
+    filter: drop-shadow(rgba(0, 0, 0, 0.5) 0px 0.2em 0.2em);
+}
+
+h1::first-letter {
+    color: var(--hover_gold);
+    font-size: 200%;
+    margin: 2px;
+}
+
+h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* wilkommen area */
+
+.willkommentext {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-around;
+    padding: 1em 0em;
+}
+
+.grid5 {
+    grid-column: 1 / 2 span;
+}
+
+.grid6 {
+    grid-column: 1 / 2 span;
+}
+
+.willkommentext img {
+    width: 99%;
+    height: auto;
+    -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.5) 0px 0.2em 0.2em);
+    filter: drop-shadow(rgba(0, 0, 0, 0.5) 0px 0.2em 0.2em);
+}
+
+.willkommentext iframe {
+    width: 86vw;
+    height: 48.4vw;
+}
+
+/* tables */
+
+table {
+    width: 98%;
+    margin: auto;
+}
+
+td {
+    padding: 0.5em;
+    border: 1px solid var(--gray);
+    border-radius: 0.3em;
+}
+
+td img {
+    width: 15vw;
+}
+
+tr:nth-of-type(odd) td {
+    background: var(--back_green);
+}
+
+/* table-scrollable */
+
+.table-scrollable {
+    width: 100%;
+    overflow-y: auto;
+    margin: 0em;
+}
+
+.table-scrollable::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+}
+
+.table-scrollable::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 3px solid var(--text_white);
+    background-color: rgba(0, 0, 0, .3);
+}
+
+/* forms */
+
+form {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1em 1em;
+}
+
+form label {
+    display: block;
+    margin: -0.5em 1.4em;
+}
+
+input, textarea {
+    width: 75%;
+    padding: 0.5em;
+    border: 1px solid var(--gray);
+    outline: none;
+    border-radius: 0.3em;
+}
+
+input:focus, textarea:focus {
+    border: 1px solid black;
+}
+
+input[type=submit], .submit {
+    background-color: var(--text_white);
+    cursor: pointer;
+    width: 14em;
+    padding: .3em 0;
+    border-radius: 0.7em;
+}
+
+input[type=submit]:hover {
+    background-color: var(--hover_gold);
+    box-shadow: 2px 2px 2px var(--gray);
+    transform: rotate(0.005turn);
+}
+
+.kontakt div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.kontakt div:last-child {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* impressum */
+
+.impressum, .datenschut {
+    margin: 1em 0em;
+    columns: 2;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+/* Bilder */
+
+.bilder div {
+    height: 30em;
+    width: calc(51.7em -1vw);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1em black;
+    text-align: center;
+    color: var(--text_white);
+
+}
+
+.bild_1 {
+    background-image: url(media/kind.jpg);
+}
+
+.bild_2 {
+    background-image: url(media/elefanten.jpg);
+}
+
+.bild_3 {
+    background-image: url(media/giraffe.jpg);
+}
+
+.bild_4 {
+    background-image: url(media/löwen.jpg);
+}
+
+/* Media */
+
+@-ms-viewport {
+    width: device-width;
+}
+
+@viewport {
+    width: device-width;
+}
+
+@media print {
+    .navigation {
+        display: none;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    main h1 {
+        font-family: cursive;
+        color: black;
+    }
+
+    main a {
+        color: black;
+        text-decoration: none;
+        text-transform: lowercase;
+        text-shadow: none;
+    }
+
+    a[href]::after {
+        content: "["attr(href) "]";
+    }
+
+    main figure, main iframe {
+        display: none;
+    }
+
+    main .willkommentext {
+        display: block;
+    }
+
+    .bee {
+        display: none;
+    }
+
+    main .heading {
+        -webkit-filter: none;
+        filter: none;
+    }
+
+    main tr td:first-child {
+        display: none;
+    }
+
+    main tr th:first-child {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 567px) {
+
+    html body {
+        width: 98%;
+        padding: 2em 0 0 0;
+    }
+
+    nav img {
+        width: 2em;
+        padding: 0;
+    }
+
+    nav, nav li {
+        margin: 0.1rem 0;
+        display: block;
+    }
+
+    .navigation button {
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        border: 0;
+        background: var(--hover_gold);
+        display: block;
+    }
+
+    .navigation ul {
+        display: none;
+        margin-top: 2rem;
+        margin-left: 1rem;
+    }
+
+    [aria-expanded="true"]~ul {
+        display: block;
+    }
+
+    main .willkommentext {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .willkommentext img {
+        width: 80%;
+        height: auto;
+    }
+
+    .willkommen_bild1 {
+        content: url(media/löwen.jpg);
+    }
+
+    .willkommen_bild2 {
+        content: url(media/elefanten.jpg);
+    }
+
+    main .kontakt div {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    main .kontakt div:last-child {
+
+        justify-content: center;
+    }
+
+}
+
+/* smoth scroll */
+
+@media screen and (prefers-reduced-motion: no-preference) {
+
+    html,
+    body {
+        scroll-snap-type: y none;
+        scroll-behavior: smooth;
+        scroll-padding: 0;
+    }
+
+    section {
+        scroll-snap-align: start;
+        scroll-margin: 0;
+        margin: 0em;
+    }
+}
+
+/* keyframes  */
+
+@keyframes animation {
+    0% {
+        left: -7em;
+        top: -7em;
+    }
+
+    30% {
+        left: -6em;
+        top: -5em;
+    }
+
+    40% {
+        left: 27em;
+        top: 1.2em;
+    }
+
+    50% {
+        left: 28em;
+        top: 1em;
+    }
+
+    90% {
+        left: 31em;
+        top: 1.2em;
+    }
+
+    100% {
+        left: 55em;
+        top: -3em;
+    }
+}
+
+.bee {
+    animation-name: animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    width: 3em;
+    position: relative;
+}

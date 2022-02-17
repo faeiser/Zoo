@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kontaktseite</title>
+</head>
+
+<body id="oben">
+    <header>
+        <nav class="navigation">
+            <button class="navbutton" aria-expanded="false" aria-controls="navi-liste">
+                ☰ Menü
+            </button>
+            <ul id="navi-liste">
+                <li> <a href="index.html">Willkommen</a>
+                </li>
+                <li> <a href="info.html">Infoseite</a>
+                </li>
+                <li> <a href="kontakt.html">Kontaktseite</a>
+                </li>
+                <li> <a href="bilder.html">Bilder</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="heading">
+            <img class="bee" src="media/bee.png" alt="">
+            <h1>Kontakt</h1>
+        </section>
+        <section class="kontakt">
+            <form action="">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="vorname" id="name" placeholder="Max Mustermann">
+                </div>
+                <br>
+                <div>
+                    <label for="emailadresse">E-Mail</label>
+                    <input type="email" name="emailadresse" id="emailadresse" placeholder="Musternamm@muster.at">
+                </div>
+                <br>
+                <div>
+                    <label for="besuchstag">Besuchstag</label>
+                    <input type="date" name="besuchstag" id="besuchstag">
+                </div>
+                <br>
+                <div>
+                    <label for="besuchszeit ">Besuchszeit</label>
+                    <input type="time" name="besuchszeit" id="besuchszeit">
+                </div>
+                <br>
+                <div>
+                    <label for="gefallen">Hat es gefallen?</label>
+                    <input type="range" name="gefallen" id="gefallen" placeholder="Musternamm@muster.at">
+                </div>
+                <br>
+                <div class="weiter">
+                    <label for="weiterempfehlung">Weiterempfehlung:</label>
+                    <input type="radio" name="weiterempfehlung" id="weiterempfehlung">
+                    <label for="weiterempfehlung">ja</label>
+                    <input type="radio" name="weiterempfehlung" id="weiterempfehlung">
+                    <label for="weiterempfehlung">nein</label>
+                </div>
+                <br>
+                <div>
+                    <label for="tierart">Welche Tierart hat am besten gefallen?</label>
+                    <input list="tierarten" name="tierart" id="tierart">
+                    <datalist id="tierarten">
+                        <option value="Säugetiere">
+                        <option value="Vögel">
+                        <option value="Amphibien">
+                        <option value="Reptilien">
+                        <option value="Fische">
+                        <option value="Insekten">
+                        <option value="Spinnen">
+                        <option value="Wirbellose">
+                    </datalist>
+                </div>
+                <br>
+                <div>
+                    <label for=" text ">Text</label>
+                    <textarea id="text " name="text " rows="8 " cols="50 "
+                        placeholder="Schreiben Sie uns eine Nachricht."></textarea>
+                </div>
+                <div>
+                    <label for="besucherinfo">Besucherinfo</label>
+                    <input list="besucherinfos" name="besucherinfo " id="besucherinfo ">
+                    <datalist id="besucherinfos">
+                        <option value="Familienausflug">
+                        <option value="Allein unterwegs">
+                        <option value="Gruppenausflug">
+                        <option value="Ausflug mit Freunden">
+                        <option value="was anderes">
+                        </option>
+                    </datalist>
+                </div>
+                <br>
+                <div>
+                    <!-- <input type="submit"> -->
+                    <button type="button" class="submit">Absenden</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <a href="impressum.html">Impressum</a>
+        <a href="#oben">Zum Anfang</a>
+        <a href="#" class="icon"><img src="media/social_media_facebook_fb_icon_129002.png" alt="Facebock"></a>
+        <a href="#" class="icon"><img src="media/social_media_linkedin_icon_128990.png" alt="Linkedin"></a>
+    </footer>
+    <script src="nav.js"></script>
+</body>
+
+</html>
